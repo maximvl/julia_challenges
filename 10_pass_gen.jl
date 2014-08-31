@@ -6,7 +6,7 @@ type Password
 end
 
 function rand(::Type{Password}, n=10)
-    Password([rand(33:'Z') for i in 1:n])
+    Password([rand(33:'z') for i in 1:n])
 end
 
 to_string(p::Password) = convert(String, p.value)
